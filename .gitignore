@@ -1,0 +1,3 @@
+Resources\\
+git rm -r --cached Resources\\
+x64\\
