@@ -16,14 +16,3 @@ void Player::Update()
 {
 	
 }
-
-//Move Player::GetLastMove()
-//{
-//	if (_bestMove.IsEmpty())
-//		return _bestMove;
-//	
-//	Move move = std::move(_bestMove);
-//	_bestMove.Reset();
-//
-//	return move;
-//}

@@ -6,8 +6,6 @@
 #include "Board.h"
 #include "TrashTray.h"
 
-//#include "Game.h"
-
 void Human::Update()
 {
 	Super::Update();
@@ -47,7 +45,6 @@ void Human::Update()
 		{
 			Piece* captured = _board->GetPieceOnIdxOrNull(posIdx);
 			_bestMove = { _grabStartIdx, posIdx, captured };
-			//_board->UpdatePiecePos(move);
 		}
 
 		_board->SetAvailableMoves(nullptr);

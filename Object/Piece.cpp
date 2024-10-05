@@ -136,8 +136,6 @@ void Piece::GetAvailableMoves(OUT vector<Move>& moves, const VectorInt* offset, 
 	VectorInt to;
 	int32 maxMoveCount = GetType() == TYPE_KING ? 1 : 7;
 
-	//const Zone* attackZone = _board->GetEnemysAttackZone(IsPlayers());
-
 	for (int32 offsetIdx = 0; offsetIdx < offsetLength; ++offsetIdx)
 	{
 		to = from;

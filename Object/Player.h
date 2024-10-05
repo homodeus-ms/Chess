@@ -18,7 +18,6 @@ public:
 protected:
 	PlayerType _playerType;
 	ColorType _color;
-	uint32 _currScore = 1400;
 
 	Board* _board = nullptr;
 	Move _bestMove;

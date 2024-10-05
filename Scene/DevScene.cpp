@@ -48,12 +48,6 @@ void DevScene::Init()
 			_board->SetBoard(PLAYER_WHITE_BASIC_FORM, s_playerColor);
 			//_board->SetBoard(TEST2_WHITE, s_playerColor);
 
-
-		//_board->SetBoard(PLAYER_BLACK_TEST2, _playerColor);
-		//_board->SetBoard(BASIC_TEST1, _playerColor);
-		//_board->SetBoard(BASIC_TEST2, _playerColor);
-		//_board->SetBoard(GIVEUP_TEST2, _playerColor);
-		//_board->SetBoard(TEST1, _playerColor);
 	}
 
 
@@ -265,17 +259,12 @@ void DevScene::CheckMate()
 bool DevScene::IsGameOver()
 {
 	bool isKingCaptured = _board->IsKingCaptured();
-	/*if (isKingCaptured && _currTurn == PLAYER_TURN)
-	{
-		GET_SINGLE(ResourceManager)->PlaySounds("Lose");
-	}*/
 
 	return isKingCaptured;
 }
 
 void DevScene::GiveUp()
 {
-	//GET_SINGLE(ResourceManager)->PlaySounds("Win");
 	_aiGiveup = true;
 }
 

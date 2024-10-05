@@ -35,6 +35,18 @@ private:
 	int32 GetPlayerScore() { return _playerScore; }
 
 private:
+
+	enum
+	{
+		INIT_SCORE = 5000,
+		RETURN_SCORE_LIMIT = -4000,
+		TIME_LIMIT_TICK = 1000,
+	};
+
+	enum
+	{
+		POSITION_BASIC_BONUS = 10,
+	};
 	
 	Piece* _currBoard[G_TILE_COUNT * G_TILE_COUNT] = { nullptr, };
 	const vector<Piece*>& _myPieces;
@@ -46,8 +58,8 @@ private:
 	
 	const GameLevel _gameLevel;
 
-	int32 _myScore = 5000;
-	int32 _playerScore = 5000;
+	int32 _myScore = INIT_SCORE;
+	int32 _playerScore = INIT_SCORE;
 
 	std::mt19937 _randomNumGenerator;
 	std::uniform_int_distribution<int> _rand;

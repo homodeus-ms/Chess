@@ -25,8 +25,8 @@ void AI::Update()
 	Super::Update();
 
 	CopyBoard();
-	_myScore = 5000;
-	_playerScore = 5000;
+	_myScore = INIT_SCORE;
+	_playerScore = INIT_SCORE;
 
 	int32 targetDepth = GetDepthLevelForThisTurn();
 	
@@ -36,18 +36,17 @@ void AI::Update()
 
 	retValue = MiniMax(targetDepth, 1, INT_MIN, INT_MAX, true);
 
-	if (retValue < -4000)
+	if (retValue < RETURN_SCORE_LIMIT)
 		_bestMove.Reset();
 
 	_timeOut = false;
 
 	uint64 now = ::GetTickCount64();
 
-	while (now - _prevTime < 1000)
+	while (now - _prevTime < TIME_LIMIT_TICK)
 	{
 		now = ::GetTickCount64();
 	}
-	
 
 	if (_bestMove.IsEmpty())
 	{
@@ -192,7 +191,7 @@ int32 AI::CalculatePositionBonus(const Move& move)
 		bonus += pawn->CalculatePawnMoveScore(move.from, move.to);
 	}
 	else if (move.to >= BONUS_AREA_LEFT_TOP && move.to <= BONUS_AREA_RIGHT_BOTTOM)
-		bonus += 10;
+		bonus += POSITION_BASIC_BONUS;
 
 	return bonus;
 }
