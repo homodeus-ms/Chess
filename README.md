@@ -11,6 +11,46 @@
 
 <br>
 
+<br>
+
+**전체 로직의 흐름**
+
+<br>
+
+![전체 로직](./Chess전체그림.png)
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+**MiniMax와 Alpha-Beta Pruning**
+
+<br>
+
+<br>
+
+![minimax](./Alpha-beta.png)
+
+<br>
+
+<br>
+
+<br>
+
+**AI체스봇의 핵심로직은 Object/AI.cpp 에서 확인하실 수 있습니다.**
+
+<br>
+
+<br>
+
+<br>
+
+**Description**
+
 AI의 로직에는 Minimax 알고리듬과 알파-베타 가지치기 기법정도만 쓰였습니다.
 
 사람과 두는 거라 Iterative Deepening 과 같은 기법은 사용하지 않았습니다.
